@@ -22,7 +22,7 @@ Mqtt.prototype.init = function () {
 
   this.client.on('connect', function () {
     this.client.subscribe('#')
-  })
+  }.bind(this))
 
   // this.client.on('message', function (topic, message) {
   //   console.log(message.toString())
